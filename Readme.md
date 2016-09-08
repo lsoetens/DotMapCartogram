@@ -1,0 +1,34 @@
+---
+title: "Readme"
+author: "Loes Soetens"
+date: "8 september 2016"
+output: html_document
+---
+# DotMapCartogram
+
+![example](https://github.com/lsoetens/DotMapCartogram/Before_after.JPG)
+
+##How to create dot map cartograms to detect infectious disease outbreaks? 
+
+##Requirements:
+* R / Rstudio
+* ScapeToad application installed on your computer (http://scapetoad.choros.ch/)
+
+##What data do I need and in what format?
+* first you need a file with the administrative regions of the cases (every row is a case-location)
+* you need a shapefile (.shp) of the administrative regions of the cases (ie. a shapefile with a postal codes in the Netherlands)
+* you need a shapefile (.shp) with administrative regions and population numbers you want the map to be deformed by (ie. a shapefile of municipalities in the Netherlands with their number of population)
+
+##How to proceed?
+
+First follow the code as written in linelist_to_pointshapefile.R. This code transforms a linelist of locations to a spatialpoints shapefile. 
+Next, open the ScapeToad application and add several layers: the spatialpoints shapefile with location data, the shapefile with administrative regions and population numbers, and optional some other layers you want to be transformed simultaneously. Next, click on the 'create cartogram' button and follow the following steps:
+* select the administrative region shapefile as the spatial coverage parameter -NEXT-
+* select the population number variable (or other) as the cartogram attribute, keep attribute type to 'mass' -NEXT-
+* click on layers to transform and select the other layers you want to transform, among which the spatialpoints file with case locations -NEXT-
+* set the transformation quality to 'high'
+* click on 'compute'
+Now the application starts creating the cartogram. When it is finished, you can save the newly created layers as shapefiles.
+Finally, follow the code as written in cart_shapefile_to_map.R, which will load your cartogram shapefiles and will create a nice looking map out of it
+
+
