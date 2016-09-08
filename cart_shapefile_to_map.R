@@ -8,7 +8,7 @@
 # optional: additional layers with information (also transformed) with for example the province boundaries
 
 # first set working directory
-setwd("N:/Losse_opdrachten/Gudrun_Salmonella/")
+setwd("C:/linktoworkingdirectory/")
 
 # load packages
 library(sp)

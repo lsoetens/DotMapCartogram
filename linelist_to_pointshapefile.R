@@ -5,7 +5,7 @@
 # a shapefile corresponding with the administrative region of the cases (ie. shapefile of all postal codes of a certain country)
 
 # set your working directory
-setwd("N:/Losse_opdrachten/Gudrun_Salmonella/")
+setwd("C:/linktoworkingdirectory/")
 
 # load packages
 library(xlsx)
@@ -14,10 +14,10 @@ library(maptools)
 library(plyr)
 
 # load your case data
-cases<- read.xlsx("20160906_Data voor kaart_naar Loes.xlsx", sheetIndex = 1, header = T)
+cases<- read.xlsx("file_with_case_locations.xlsx", sheetIndex = 1, header = T)
 
 # load your corresponding shapefile
-pc4_nl_2015<- readShapeSpatial( "pc4_2015.shp")
+pc4_nl_2015<- readShapeSpatial( "shapefile_with_administrative_regions.shp")
 
 # aggregate your case data by counting the number of cases per administrative region
 case_agg<- count(cases$postcodenr)
