@@ -7,6 +7,7 @@ output: html_document
 # DotMapCartogram
 
 ![example](https://github.com/lsoetens/DotMapCartogram/blob/master/Before_after.JPG)
+*Fig. example of dot map (left) and the corresponding dot map cartogram (right)*
 
 ##How to create dot map cartograms to detect infectious disease outbreaks? 
 
